@@ -10,7 +10,7 @@ document.getElementById('option3').style.visibility = 'hidden';
 
 // jquery variant
 //$('#option1').html('Dit is keuze 1');
-
+var HasObject = false;
 
 // https://www.youtube.com/watch?v=4ba1BqJ4S2M
 
@@ -64,7 +64,7 @@ function Level1_die() {
 function Leveldie() {
 	console.log("Leveldie()");
 
-	document.getElementById('uitleg').innerHTML = 'Jou slechte keuzes hebben jou geleid tot je dood'
+	document.getElementById('uitleg').innerHTML = 'Jouw slechte keuzes hebben jou geleid tot je dood'
 	document.getElementById('uitleg2').innerHTML = ''
 	document.getElementById('level_title').innerHTML = 'Dead';
 	document.getElementById('level_image').src = 'img/gameover.jpg';
@@ -75,7 +75,7 @@ function Leveldie() {
 	var opt1 = document.getElementById('option1');
 	document.getElementById('option1').style.visibility = 'visible';
 	opt1.innerHTML = 'Opnieuw proberen';
-	opt1.setAttribute("onClick", "start();");
+	opt1.setAttribute("onClick", "location.reload();");
 
 }
 
@@ -140,7 +140,7 @@ function Level_sleep() {
 	console.log("Level_sleep()");
 
 	document.getElementById('uitleg').innerHTML = 'Je ligt verder te slapen, en opeens schiet er iets door je tent heen.'
-	document.getElementById('uitleg2').innerHTML = 'Je word licht in je hoofd en merkt dat je een injectie naald in hebt gekregen.'
+	document.getElementById('uitleg2').innerHTML = 'Je word licht in je hoofd en merkt dat je een injectie naald in hebt gekregen. Dan word alles donker.'
 	document.getElementById('level_title').innerHTML = 'In tent'
 	document.getElementById('level_image').src = 'img/intent.jpg'
 	document.getElementById('option2').style.visibility = 'hidden';
@@ -154,14 +154,93 @@ function Level_sleep() {
 function Level2_4() {
 	console.log("Level2_4()");
 
-	document.getElementById('uitleg').innerHTML = ''
+	document.getElementById('uitleg').innerHTML = 'Je word wakker in een of andere tempel.'
+	document.getElementById('uitleg2').innerHTML = 'Ergens in de tempel hoor je allemaal mensen en hele rare muziek.'
+	document.getElementById('level_title').innerHTML = 'Ergens??'
+	document.getElementById('level_image').src = 'img/tempel.jpg'
+
+	var opt1 = document.getElementById('option1');
+	document.getElementById('option1').style.visibility = 'visible';
+	opt1.innerHTML = 'Je gaat naar links';
+	opt1.setAttribute("onClick", "Level3_1();");
+
+	var opt2 = document.getElementById('option2');
+	document.getElementById('option2').style.visibility = 'visible';
+	opt2.innerHTML = 'Je gaat rechtdoor';
+	opt2.setAttribute("onClick", "Level3_2();");
+
+	var opt3 = document.getElementById('option3');
+	document.getElementById('option3').style.visibility = 'visible';
+	opt3.innerHTML = 'Je gaat naar rechts';
+	opt3.setAttribute("onClick", "Level3_3();");
 }
 
 function Level2_2() {
 	console.log("Levl2_2()");
 
+	document.getElementById('uitleg').innerHTML = 'Je volgt hem tot dat je in een of andere tempel zit.'
+	document.getElementById('uitleg2').innerHTML = 'Eenmaal daar hoor je allemaal mensen diep in de tempel en ook nog eens rare muziek. Je hebt nu 3 keuzes wat doe je?'
+	document.getElementById('level_title').innerHTML = 'Ergens??'
+	document.getElementById('level_image').src = 'img/tempel.jpg'
+
+	var opt1 = document.getElementById('option1');
+	document.getElementById('option1').style.visibility = 'visible';
+	opt1.innerHTML = 'Je gaat naar links';
+	opt1.setAttribute("onClick", "Level3_1();");
+
+	var opt2 = document.getElementById('option2');
+	document.getElementById('option2').style.visibility = 'visible';
+	opt2.innerHTML = 'Je gaat rechtdoor en volgt de man verder';
+	opt2.setAttribute("onClick", "Level3_2();");
+
+	var opt3 = document.getElementById('option3');
+	document.getElementById('option3').style.visibility = 'visible';
+	opt3.innerHTML = 'Je gaat naar rechts';
+	opt3.setAttribute("onClick", "Level3_3();");
+}
+
+function Level3_1() {
+	console.log("Level3_1()");
+
+	document.getElementById('uitleg').innerHTML = 'Je komt in een rare kleine kamer en als je naar binnen gaat dan gaat de deur achter je dicht.'
+	document.getElementById('uitleg2').innerHTML = 'De muren bewegen en je merkt dat de kamer steeds kleiner word. Je zit in een oude val!'
+	document.getElementById('level_title').innerHTML = 'Ergens??'
+	document.getElementById('level_image').src = 'img/Trapped.jpg'
+	document.getElementById('option2').style.visibility = 'hidden';
+	document.getElementById('option3').style.visibility = 'hidden';
+
+	var opt1 = document.getElementById('option1');
+	document.getElementById('option1').style.visibility = 'visible';
+	opt1.innerHTML = 'Je wacht het maar af....';
+	opt1.setAttribute("onClick", "Leveldie();");
+}
+
+function Level3_2() {
+	console.log("Levl3_2()");
+
+	document.getElementById('uitleg').innerHTML = 'Je volgt hem verder in de tempel'
+	document.getElementById('uitleg2').innerHTML = 'Eenmaal daar hoor je allemaal mensen diep in de tempel en ook nog eens rare muziek. Je hebt nu 3 keuzes wat doe je?'
+	document.getElementById('level_title').innerHTML = 'Ergens??'
+	document.getElementById('level_image').src = 'img/tempel.jpg'
+
+	var opt1 = document.getElementById('option1');
+	document.getElementById('option1').style.visibility = 'visible';
+	opt1.innerHTML = 'Je gaat naar links';
+	opt1.setAttribute("onClick", "Level3_1();");
+
+	var opt2 = document.getElementById('option2');
+	document.getElementById('option2').style.visibility = 'visible';
+	opt2.innerHTML = 'Je gaat rechtdoor en volgt de man verder';
+	opt2.setAttribute("onClick", "Level3_2();");
+
+	var opt3 = document.getElementById('option3');
+	document.getElementById('option3').style.visibility = 'visible';
+	opt3.innerHTML = 'Je gaat naar rechts';
+	opt3.setAttribute("onClick", "Level3_3();");
+}
+
+function Level3_4() {
+	console.log("Level3_4()");
+
 	document.getElementById('uitleg').innerHTML = ''
-	document.getElementById('uitleg2').innerHTML = ''
-	document.getElementById('level_title').innerHTML = ''
-	document.getElementById('level_image').src = ''
 }
